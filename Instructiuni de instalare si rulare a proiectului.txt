@@ -1,3 +1,21 @@
+Proiect baze de date  myshop
+Scopul acestui proiect este de a folosi cunostintele de SQL dobandite in timpul cursului de Testare Manuala si punerea lor in practica.
+Aplicatia testata: myshop
+Tool utilizat: MySQL Workbench
+
+Descriere baza de date: myshop este un proiect ce gestioneaza un mic online shop cu jucarii. 
+
+Schema baze de date:
+
+tabela detalii_comenzi este conectata cu tabela produse prin o relatie de tip 1:1 relatie care este implementata prin produse.id ca si cheie primara si detalii_comenzi.id_produs ca si cheie secundara
+tabela detalii_comenzi este conectata cu tabela comenzi prin o relatie de tip 1:1 relatie care este implementata prin comenzi.id ca si cheie primara si detalii_comenzi.id_comanda ca si cheie secundara
+tabela gestiune_produse este conectata cu tabela produse prin o relatie de tip 1:1 relatie care este implementata prin produse.id ca si cheie primara si gestiune_produse.id_produs ca si cheie secundara
+tabela comenzi este conectata cu tabela utilizatori prin o relatie de tip 1:1 relatie care este implementata prin utilizatori.id ca si cheie primara si comenzi.id_client ca si cheie secundara	
+
+Queries baza de date:
+
+DDL (Data Definition Language)
+
 create database myshop;
 
 create table produse(
@@ -42,6 +60,10 @@ add foreign key (id_comanda) references comenzi(id);
 alter table gestiune_produse
 add foreign key (id_produs) references produse(id);
 
+alter table comenzi
+add foreign key (id_client) references utilizatori(id);
+
+
 alter table comenzi 
 change data_comanda data_comanda date;
 
@@ -49,6 +71,9 @@ alter table produse
 change descriere_produs descriere_produs varchar(250);
 
 
+
+
+DML (Data Manipulation Language)
 
 insert into produse (id, nume_produs, categorie_produs, pret_vanzare, stoc_disponibil, descriere_produs)
 values (1, "Antemergator", "Jucarii Montessori", 420, 22, "Antemergator 6 in 1 cu ceas labirint, abac, forme geometrice, puzzle 3D, din lemn");
@@ -153,10 +178,17 @@ insert into gestiune_produse (id, id_produs, cantitate_intrari, cantitate_iesiri
 value (7, 7, 37, 1, 36);
 
 
+
 update produse set pret_vanzare=450 where id=1;
 update detalii_comenzi set pret_total=450 where id=4;
-select * from produse;
+
+
+DQL (Data Query Language)
+
 delete from detalii_comenzi where id=3;
+
+
+select * from produse;
 select email_utilizator, adresa_livrare from utilizatori; 
 select nume_produs from produse where pret_vanzare < 100;
 select * from produse where pret_vanzare > 100 and pret_vanzare < 200;
@@ -179,10 +211,5 @@ where pret_vanzare > (select avg(pret_vanzare) from produse);
 select nume_produs from produse inner join detalii_comenzi
 on produse.id=detalii_comenzi.id_produs;
 
-select nume_produs from produse left join detalii_comenzi
-on produse.id=detalii_comenzi.id_produs;
-
-select nume_produs from detalii_comenzi left join produse
-on produse.id=detalii_comenzi.id_produs;
-
-select nume_produs, pret_vanzare from produse cross join gestiune_produse;
+Concluzie:
+Am invatat crearea si manipularea unei baze de date, folosind informatiile predare la curs.

@@ -1,4 +1,4 @@
-Proiect baze de date  myshop
+## Proiect baze de date  myshop
 Scopul acestui proiect este de a folosi cunostintele de SQL dobandite in timpul cursului de Testare Manuala si punerea lor in practica.
 Aplicatia testata: myshop
 Tool utilizat: MySQL Workbench

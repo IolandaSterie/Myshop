@@ -1,7 +1,9 @@
 # Proiect baze de date  myshop
 Scopul acestui proiect este de a folosi cunostintele de SQL dobandite in timpul cursului de Testare Manuala si punerea lor in practica.
-Aplicatia testata: myshop
-Tool utilizat: MySQL Workbench
+
+Aplicatia testata: **myshop**
+
+Tool utilizat: **MySQL Workbench**
 
 Descriere baza de date: myshop este un proiect ce gestioneaza un mic online shop cu jucarii. 
 

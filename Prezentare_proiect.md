@@ -16,7 +16,7 @@ Descriere baza de date: myshop este un proiect ce gestioneaza un mic online shop
 
 **DDL (Data Definition Language)**
 
-create database myshop;
+**create database myshop;**
 
 **create table produse** **(
 	id int primary key auto_increment,
@@ -54,26 +54,26 @@ create database myshop;
 alter table detalii_comenzi
 add foreign key (id_produs) references produse(id);
 
-alter table detalii_comenzi
+**alter** table detalii_comenzi
 add foreign key (id_comanda) references comenzi(id);
 
-alter table gestiune_produse
+**alter** table gestiune_produse
 add foreign key (id_produs) references produse(id);
 
-alter table comenzi
+**alter** table comenzi
 add foreign key (id_client) references utilizatori(id);
 
 
-alter table comenzi 
+**alter** table comenzi 
 change data_comanda data_comanda date;
 
-alter table produse
+**alter **table produse
 change descriere_produs descriere_produs varchar(250);
 
 
 
 
-DML (Data Manipulation Language)
+**DML (Data Manipulation Language)**
 
 insert into produse (id, nume_produs, categorie_produs, pret_vanzare, stoc_disponibil, descriere_produs)
 values (1, "Antemergator", "Jucarii Montessori", 420, 22, "Antemergator 6 in 1 cu ceas labirint, abac, forme geometrice, puzzle 3D, din lemn");

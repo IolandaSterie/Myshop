@@ -118,98 +118,98 @@ value (6, "DUMITRU SABIN", "dumitrusabin.2@yahoo.com", "Iasi, str Mihai Viteazu,
 
 
 
-insert into comenzi (id, id_client, data_comanda)
+**insert** into comenzi (id, id_client, data_comanda)
 value (1, 3, "2024-03-21");
 
-insert into comenzi (id, id_client, data_comanda)
+**insert** into comenzi (id, id_client, data_comanda)
 value (2, 5, "2024-03-22");
 
-insert into comenzi (id, id_client, data_comanda)
+**insert** into comenzi (id, id_client, data_comanda)
 value (3, 1, "2024-03-22");
 
-insert into comenzi (id, id_client, data_comanda)
+**inser**t into comenzi (id, id_client, data_comanda)
 value (4, 6, "2024-03-26");
 
-insert into comenzi (id, id_client, data_comanda)
+**insert** into comenzi (id, id_client, data_comanda)
 value (5, 2, "2024-03-27");
 
-insert into comenzi (id, id_client, data_comanda)
+**insert** into comenzi (id, id_client, data_comanda)
 value (6, 4, "2024-03-27");
 
 
 
-insert into detalii_comenzi (id, id_comanda, id_produs, cantitate, pret_total)
+**insert** into detalii_comenzi (id, id_comanda, id_produs, cantitate, pret_total)
 value (1, 1, 3, 1, 73 );
 
-insert into detalii_comenzi (id, id_comanda, id_produs, cantitate, pret_total)
+**insert** into detalii_comenzi (id, id_comanda, id_produs, cantitate, pret_total)
 value (2, 2, 4, 2, 164 );
 
-insert into detalii_comenzi (id, id_comanda, id_produs, cantitate, pret_total)
+**insert** into detalii_comenzi (id, id_comanda, id_produs, cantitate, pret_total)
 value (3, 3, 5, 1, 480 );
 
-insert into detalii_comenzi (id, id_comanda, id_produs, cantitate, pret_total)
+**insert** into detalii_comenzi (id, id_comanda, id_produs, cantitate, pret_total)
 value (4, 4, 1, 1, 420 );
 
-insert into detalii_comenzi (id, id_comanda, id_produs, cantitate, pret_total)
+**insert** into detalii_comenzi (id, id_comanda, id_produs, cantitate, pret_total)
 value (5, 5, 2, 2, 346 );
 
-insert into detalii_comenzi (id, id_comanda, id_produs, cantitate, pret_total)
+**insert** into detalii_comenzi (id, id_comanda, id_produs, cantitate, pret_total)
 value (6, 6, 7, 1, 859 );
 
-insert into gestiune_produse (id, id_produs, cantitate_intrari, cantitate_iesiri, stoc_depozit)
+**insert** into gestiune_produse (id, id_produs, cantitate_intrari, cantitate_iesiri, stoc_depozit)
 value (1, 1, 23, 1, 22);
 
-insert into gestiune_produse (id, id_produs, cantitate_intrari, cantitate_iesiri, stoc_depozit)
+**insert** into gestiune_produse (id, id_produs, cantitate_intrari, cantitate_iesiri, stoc_depozit)
 value (2, 2, 43, 2, 41);
 
-insert into gestiune_produse (id, id_produs, cantitate_intrari, cantitate_iesiri, stoc_depozit)
+**insert** into gestiune_produse (id, id_produs, cantitate_intrari, cantitate_iesiri, stoc_depozit)
 value (3, 3, 74, 1, 73);
 
-insert into gestiune_produse (id, id_produs, cantitate_intrari, cantitate_iesiri, stoc_depozit)
+**insert** into gestiune_produse (id, id_produs, cantitate_intrari, cantitate_iesiri, stoc_depozit)
 value (4, 4, 22, 2, 20);
 
-insert into gestiune_produse (id, id_produs, cantitate_intrari, cantitate_iesiri, stoc_depozit)
+**insert** into gestiune_produse (id, id_produs, cantitate_intrari, cantitate_iesiri, stoc_depozit)
 value (5, 5, 18, 1, 17);
 
-insert into gestiune_produse (id, id_produs, cantitate_intrari, cantitate_iesiri, stoc_depozit)
+**insert** into gestiune_produse (id, id_produs, cantitate_intrari, cantitate_iesiri, stoc_depozit)
 value (6, 6, 80, 0, 80);
 
-insert into gestiune_produse (id, id_produs, cantitate_intrari, cantitate_iesiri, stoc_depozit)
+**insert** into gestiune_produse (id, id_produs, cantitate_intrari, cantitate_iesiri, stoc_depozit)
 value (7, 7, 37, 1, 36);
 
 
 
-update produse set pret_vanzare=450 where id=1;
-update detalii_comenzi set pret_total=450 where id=4;
+**update** produse set pret_vanzare=450 where id=1;
+**update** detalii_comenzi set pret_total=450 where id=4;
 
 
-DQL (Data Query Language)
+**DQL (Data Query Language)**
 
-delete from detalii_comenzi where id=3;
+**delete** from detalii_comenzi where id=3;
 
 
-select * from produse;
-select email_utilizator, adresa_livrare from utilizatori; 
-select nume_produs from produse where pret_vanzare < 100;
-select * from produse where pret_vanzare > 100 and pret_vanzare < 200;
-select * from produse where not pret_vanzare > 450 or stoc_disponibil < 50 and categorie_produs like "Jucarii%";
-select count(*) from  utilizatori;
-select max(data_comanda) from comenzi;
-select avg(pret_total) from detalii_comenzi;
-select sum(pret_total) from detalii_comenzi;
+**select** * from produse;
+**select** email_utilizator, adresa_livrare from utilizatori; 
+**select** nume_produs from produse **where** pret_vanzare < 100;
+**select** * from produse **where** pret_vanzare > 100 **and** pret_vanzare < 200;
+**select** * from produse **where not** pret_vanzare > 450 **or** stoc_disponibil < 50 **and** categorie_produs **like** "Jucarii%";
+**select** count(*) from  utilizatori;
+**select** max(data_comanda) from comenzi;
+**select** avg(pret_total) from detalii_comenzi;
+**select** sum(pret_total) from detalii_comenzi;
 
-select id_comanda,
-	avg(pret_total) as "Pret mediu",
-    min(pret_total) as "Pret minim",
-    max(pret_total) as "Pret maxim"
-    from detalii_comenzi
-    group by id_comanda;
+**select** id_comanda,
+	avg(pret_total) **as** "Pret mediu",
+        min(pret_total) **as** "Pret minim",
+        max(pret_total) **as** "Pret maxim"
+        from detalii_comenzi
+      **group by** id_comanda;
     
-select nume_produs, pret_vanzare from produse
-where pret_vanzare > (select avg(pret_vanzare) from produse);
+**select** nume_produs, pret_vanzare from produse
+**where** pret_vanzare > (select avg(pret_vanzare) from produse);
 
-select nume_produs from produse inner join detalii_comenzi
+**select** nume_produs from produse **inner join** detalii_comenzi
 on produse.id=detalii_comenzi.id_produs;
 
-Concluzie:
+**Concluzie:**
 Am invatat crearea si manipularea unei baze de date, folosind informatiile predare la curs.

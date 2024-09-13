@@ -5,8 +5,7 @@ Tool utilizat: MySQL Workbench
 
 Descriere baza de date: myshop este un proiect ce gestioneaza un mic online shop cu jucarii. 
 
-**Schema baze de date:
-**
+**Schema baze de date:**
 tabela detalii_comenzi este conectata cu tabela produse prin o relatie de tip 1:1 relatie care este implementata prin produse.id ca si cheie primara si detalii_comenzi.id_produs ca si cheie secundara
 tabela detalii_comenzi este conectata cu tabela comenzi prin o relatie de tip 1:1 relatie care este implementata prin comenzi.id ca si cheie primara si detalii_comenzi.id_comanda ca si cheie secundara
 tabela gestiune_produse este conectata cu tabela produse prin o relatie de tip 1:1 relatie care este implementata prin produse.id ca si cheie primara si gestiune_produse.id_produs ca si cheie secundara

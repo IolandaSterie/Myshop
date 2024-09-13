@@ -18,38 +18,38 @@ Descriere baza de date: myshop este un proiect ce gestioneaza un mic online shop
 
 create database myshop;
 
-create table produse(
+**create table produse** **(
 	id int primary key auto_increment,
-    nume_produs varchar(30),
-    categorie_produs varchar (40),
-    pret_vanzare float (5),
-    stoc_disponibil int,
-    descriere_produs varchar (150));
+        nume_produs varchar(30),
+        categorie_produs varchar (40),
+        pret_vanzare float (5),
+        stoc_disponibil int,
+        descriere_produs varchar (150));*
     
-create table utilizatori(
+**create table utilizatori** **(
 	id int primary key auto_increment,
-    nume_utilizator varchar (30),
-    email_utilizator varchar (40),
-    adresa_livrare varchar (80));
+        nume_utilizator varchar (30),
+        email_utilizator varchar (40),
+        adresa_livrare varchar (80));*
     
-create table comenzi(
+**create table comenzi** **(
 	id int primary key auto_increment,
-    id_client int,
-    data_comanda varchar(12));
+        id_client int,
+        data_comanda varchar(12));*
     
-create table detalii_comenzi(
+**create table detalii_comenzi** **(
 	id int primary key auto_increment,
-    id_comanda int,
-    id_produs int,
-    cantitate int,
-    pret_total float(5));
+        id_comanda int,
+        id_produs int,
+        cantitate int,
+    	pret_total float(5));*
     
-create table gestiune_produse(
+**create table gestiune_produse** **(
 	id int primary key auto_increment,
 	id_produs int,
-    cantitate_intrari int,
-    cantitate_iesiri int,
-    stoc_depozit int);
+        cantitate_intrari int,
+        cantitate_iesiri int,
+        stoc_depozit int);*
 
 alter table detalii_comenzi
 add foreign key (id_produs) references produse(id);

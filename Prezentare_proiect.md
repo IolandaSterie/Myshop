@@ -259,44 +259,66 @@ insert into gestiune_produse (id, id_produs, cantitate_intrari, cantitate_iesiri
 values (7, 7, 37, 1, 36);
 ```
 
+Update al pretului de vanzare a produsului cu id 1 din tabela produse<br>
+`update produse set pret_vanzare=450 where id=1;`
 
-```
-update produse set pret_vanzare=450 where id=1;
-update detalii_comenzi set pret_total=450 where id=4;
-```
+Update al pretului comenzi cu id 4<br>
+`update detalii_comenzi set pret_total=450 where id=4;`
+
+
+Stergerea comenzii cu id 3 din tabela detalii comenzi<br>
 `delete from detalii_comenzi where id=3;`<br>
 
 ### DQL (Data Query Language)
+Afisare tabela produse<br>
+`select *from produse;`<br>
 
-`select *from produse;(Afisare tabela produse)`<br>
-`select email_utilizator, adresa_livrare from utilizatori;(afisarea e-mailul-ui si adresa de livrare a utilizatorilr)` <br>
-`select nume_produs from produse where pret_vanzare < 100;(Afisarea numelui produselor cu pretul de vanzare mai mic decat 100 din tabela produse)`<br>
-`select * from produse where pret_vanzare > 100 and pret_vanzare < 200;(Afisarea produselor cu pret de vanzare cuprins intre 100 si 200)`<br>
-`select * from produse where not pret_vanzare > 450 or stoc_disponibil < 50 and categorie_produs like "Jucarii%";(Afisarea produselor unde pretul de vanzare nu este mai mare de 450 sau stocul disponibil este mai mic decat 50 si fac parte din  categoria produselor ce incep cu “Jucarii”)`<br>
-`select count(*) from  utilizatori;(Numaram cati utilizatori avem)`<br>
-`select max(data_comanda) from comenzi;(Afisarea datei ultimelor comenzi)`<br>
-`select avg(pret_total) from detalii_comenzi;(Afisare pretului mediu/comanda din tabela detalii comenzi)`<br>
-`select sum(pret_total) from detalii_comenzi;(Calcularea valorii totale a comenzilor)`<br>
+Afisarea e-mailul-ui si adresa de livrare a utilizatorilor<br>
+`select email_utilizator, adresa_livrare from utilizatori;` <br>
 
+Afisarea numelui produselor cu pretul de vanzare mai mic decat 100 din tabela produse<br>
+`select nume_produs from produse where pret_vanzare < 100;`<br>
+
+Afisarea produselor cu pret de vanzare cuprins intre 100 si 200<br>
+`select * from produse where pret_vanzare > 100 and pret_vanzare < 200;`<br>
+
+Afisarea produselor unde pretul de vanzare nu este mai mare de 450 sau stocul disponibil este mai mic decat 50 si fac parte din  categoria produselor ce incep cu “Jucarii”<br>
+`select * from produse where not pret_vanzare > 450 or stoc_disponibil < 50 and categorie_produs like "Jucarii%";`<br>
+
+Numaram cati utilizatori avem<br>
+`select count(*) from  utilizatori;`<br>
+
+Afisarea datei ultimelor comenzi<br>
+`select max(data_comanda) from comenzi;`<br>
+
+Afisare pretului mediu/comanda din tabela detalii comenzi<br>
+`select avg(pret_total) from detalii_comenzi;`<br>
+
+Calcularea valorii totale a comenzilor<br>
+`select sum(pret_total) from detalii_comenzi;`<br>
+
+
+Afisarea id-ului comenzilor minime, medii si maxime din tabela detalii comanda<br>
 ```
 select  id_comanda,
 	avg(pret_total) as "Pret mediu",
         min(pret_total) as "Pret minim",
         max(pret_total) as "Pret maxim"
         from detalii_comenzi
-        group by id_comanda;
-(Afisarea id-ului comenzilor minime, medii si maxime din tabela detalii comanda)
+        group by id_comanda
 ```
+
+Afisarea numelui si  pretului de vanzare a produselor cu pretul de vanzare peste medie<br>
 ``` 
 select nume_produs, pret_vanzare from produse
 where pret_vanzare > (select avg(pret_vanzare) from produse);
-(Afisarea numelui si  pretului de vanzare a produselor cu pretul de vanzare peste medie)
 ```
+
+Afisarea produselor comune dintre tabela produse si tabela detalii comenzi<br>
 ```
 select nume_produs from produse
 inner join detalii_comenzi
 on produse.id=detalii_comenzi.id_produs;
-(Afisarea produselor comune dintre tabela produse si tabela detalii comenzi)
 ```
 
 ## Concluzie:

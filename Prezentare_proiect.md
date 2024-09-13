@@ -67,7 +67,7 @@ add foreign key (id_client) references utilizatori(id);
 **alter** table comenzi 
 change data_comanda data_comanda date;
 
-**alter **table produse
+**alter** table produse
 change descriere_produs descriere_produs varchar(250);
 
 
@@ -75,45 +75,45 @@ change descriere_produs descriere_produs varchar(250);
 
 **DML (Data Manipulation Language)**
 
-insert into produse (id, nume_produs, categorie_produs, pret_vanzare, stoc_disponibil, descriere_produs)
+**insert** into produse (id, nume_produs, categorie_produs, pret_vanzare, stoc_disponibil, descriere_produs)
 values (1, "Antemergator", "Jucarii Montessori", 420, 22, "Antemergator 6 in 1 cu ceas labirint, abac, forme geometrice, puzzle 3D, din lemn");
 
-insert into produse (id, nume_produs, categorie_produs, pret_vanzare, stoc_disponibil, descriere_produs)
+**insert** into produse (id, nume_produs, categorie_produs, pret_vanzare, stoc_disponibil, descriere_produs)
 values (2, "Ceas copii", "Jucarii Monteessori", 173, 41, "Ceas educativ Montessori, multicolor, lemn, 15 cm diametru");
 
-insert into produse (id, nume_produs, categorie_produs, pret_vanzare, stoc_disponibil, descriere_produs)
+**insert** into produse (id, nume_produs, categorie_produs, pret_vanzare, stoc_disponibil, descriere_produs)
 value (3, "Puzzle 3D", "Jucarii Montessori", 31, 73, "Puzzle educativ Montessori cu 6 fete, caracatita, delfin, broasca testoasa, rac, crab, rechin. Jucarie din lemn cu dimensiuni 15x15x5, 9 piese");
 
-insert into produse (id, nume_produs, categorie_produs, pret_vanzare, stoc_disponibil, descriere_produs)
+**insert** into produse (id, nume_produs, categorie_produs, pret_vanzare, stoc_disponibil, descriere_produs)
 value (4, "Joc educativ matematic", "Jucarii Montessori", 82, 20, "Joc educativ matematic Montessori abac, cu cercuri si coloane, lemne, multicolor. Dimensiuni 35x5x12 cm, 56 piese.");
 
-insert into produse (id, nume_produs, categorie_produs, pret_vanzare, stoc_disponibil, descriere_produs)
+**insert** into produse (id, nume_produs, categorie_produs, pret_vanzare, stoc_disponibil, descriere_produs)
 value (5, "Balance Board", "Mobilier copii", 480, 17, "Placa de echilibru din lemn, ce ajuta imbunatatirea coordonarii motrice. Design minimalist. Adecvat pentru toate varstele. Sarcina maxima 200kg.");
 
-insert into produse (id, nume_produs, categorie_produs, pret_vanzare, stoc_disponibil, descriere_produs)
+**insert** into produse (id, nume_produs, categorie_produs, pret_vanzare, stoc_disponibil, descriere_produs)
 value (6, "Pink Lemon", "Jucarii organice", 159, 36, "Jucarie muzicala din bumbac organic, ce ii permite copilului sa adoarma mai usor");
 
-insert into produse (id, nume_produs, categorie_produs, pret_vanzare, stoc_disponibil, descriere_produs)
+**insert** into produse (id, nume_produs, categorie_produs, pret_vanzare, stoc_disponibil, descriere_produs)
 value (7, "Marsupiu ISARA", "Marsupii ergonomice", 859, 36, "Marsupiu ajustabil, marime unica, realizat din bumbac organic, potrivit inca de la nastere. Sarcina maxima: 15 kg");
 
 
 
-insert into utilizatori (id, nume_utilizator, email_utilizator, adresa_livrare)
+**insert** into utilizatori (id, nume_utilizator, email_utilizator, adresa_livrare)
 value (1, "IONESCU CALIN", "ionescucalin.10@gmail.com", "Bucuresti, str Ion Mincu, bl A3, ap 5");
 
-insert into utilizatori (id, nume_utilizator, email_utilizator, adresa_livrare)
+**insert** into utilizatori (id, nume_utilizator, email_utilizator, adresa_livrare)
 value (2, "POPESCU DIANA", "popescu.diana@yahoo.com", "Craiova, str Ion Creanga, nr 35");
 
-insert into utilizatori (id, nume_utilizator, email_utilizator, adresa_livrare)
+**insert** into utilizatori (id, nume_utilizator, email_utilizator, adresa_livrare)
 value (3, "STERIE ANTONIA", "sterieantonia.5@gmail.com", "Targoviste, str Mihai Eminescu bl 1A, ap 10");
 
-insert into utilizatori (id, nume_utilizator, email_utilizator, adresa_livrare)
+**insert** into utilizatori (id, nume_utilizator, email_utilizator, adresa_livrare)
 value (4, "STAN DAN", "stan.7dan@yahoo.com", "Cluj, str Craciunului, nr.72");
 
-insert into utilizatori (id, nume_utilizator, email_utilizator, adresa_livrare)
+**insert** into utilizatori (id, nume_utilizator, email_utilizator, adresa_livrare)
 value (5, "ION ANDREI", "ionandrei25@gmail.com", "Timisoara, str Scolii bl 32b sc A ap5 ");
 
-insert into utilizatori (id, nume_utilizator, email_utilizator, adresa_livrare)
+**insert** into utilizatori (id, nume_utilizator, email_utilizator, adresa_livrare)
 value (6, "DUMITRU SABIN", "dumitrusabin.2@yahoo.com", "Iasi, str Mihai Viteazu, nr 45");
 
 

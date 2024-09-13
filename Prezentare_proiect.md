@@ -11,9 +11,9 @@ Descriere baza de date: myshop este un proiect ce gestioneaza un mic online shop
 - tabela gestiune_produse este conectata cu tabela produse prin o relatie de tip 1:1 relatie care este implementata prin produse.id ca si cheie primara si gestiune_produse.id_produs ca si cheie secundara
 - tabela comenzi este conectata cu tabela utilizatori prin o relatie de tip 1:1 relatie care este implementata prin utilizatori.id ca si cheie primara si comenzi.id_client ca si cheie secundara	
 
-Queries baza de date:
+**Queries baza de date:**
 
-DDL (Data Definition Language)
+**DDL (Data Definition Language)**
 
 create database myshop;
 
